@@ -1,0 +1,56 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:icon="@drawable/ic_launcher"
+        android:showAsAction="always"
+        android:title="文件">
+    //菜单项的图标
+    //是否在操作栏上显示
+    //菜单项标题
+
+    //子菜单
+    <menu>
+        <item android:title="新建" android:orderInCategory="1"/>//子菜单项，设置在菜单中的序号
+        <item android:title="打开" android:orderInCategory="0"/>//子菜单项，设置在菜单中的序号
+        <item android:title="保存" android:orderInCategory="2"/>//子菜单项，设置在菜单中的序号
+        <item android:id="@+id/exit" android:title="退出"/>//为菜单项添加id属性  子菜单项标题
+    </menu>
+    </item>
+    
+    //为菜单项添加字母快捷键
+    //是否在操作栏上显示
+    //菜单项标题
+    <item 
+        android:alphabeticShortcut="e"
+        android:showAsAction="always"
+        android:title="编辑">
+        <menu>
+            <item android:title="恢复"/>
+            <item android:title="取消"/>
+            //为子菜单项添加分组  
+            <group android:enabled="false" android:id="@+id/group">//设置整组菜单项属性，不可用
+                
+                //包含多个item标签
+                <item android:title="查找"/>
+                <item android:title="替换"/>
+                <item android:title="定位"/>
+            </group>
+        </menu>
+    </item>
+    <item 
+        android:showAsAction="always"
+        android:id="@+id/set"
+        android:title="设置">
+    <menu>
+        <item android:id="@+id/start" android:title="启用"/>
+        <item android:id="@+id/stop" android:title="禁用" android:enabled="false"/> 
+    </menu>
+   </item>
+    //为菜单项添加字母快捷键
+    <item 
+        android:alphabeticShortcut="8"
+        android:showAsAction="always"
+        android:title="帮助">
+    </item>
+    
+</menu>
